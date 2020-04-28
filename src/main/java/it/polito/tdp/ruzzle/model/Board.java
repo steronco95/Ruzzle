@@ -15,7 +15,9 @@ import javafx.beans.property.StringProperty;
  */
 public class Board {
 	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
+	// questa mappa serve per modellare la scacchiera visualizzata
+	private Map<Pos, StringProperty> cells; //stringProperty posso fare in modo che il bottone sia collegato direttamente al controllo( programma); 	
+                                            //tutte le volte che cambia la stringProperty combierà anche il bottone! 
 
 	private int size;
 

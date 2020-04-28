@@ -1,0 +1,27 @@
+Problema: 
+
+Input: String da riconoscere : Parola;
+	   Contenuto della board, (matrice)
+	   cerco la prima lettera, verifico se esiste, in tal caso inizio da li la mia ricorsione;
+	   
+Soluzione Parziale : parte iniziale della parola, gia riconosciuta
+					 elenco delle posizioni in cui si trovano le lettere gia riconosciute
+					 
+Soluzione Finale : parola completamente riconosciuta
+				   elenco delle posizioni che servono per comporre la parola completa
+				   
+Livello : numero di caratteri gia riconosciuti
+
+Condizione Terminazione : livello = lunghezza parola;
+						  se viene trovata la soluzione si interrompe subito la ricerca;
+						  
+Generazione Soluzioni : trovare tutte le posizioni che siano :
+						- adiacenti all'ultima posizone usata
+						- contenenti la lettera corretta 
+						-non ancora utilizzate
+						
+Avvio Ricorsione : Livello = 1 (perche ho gia un carattere, ovvero la prima lettera della parola);
+
+Struttura dati : Stringa per memorizzare la parola;
+				int livello
+				List<Pos> 'percorso' corrispondente alla sequenza di caselle 
